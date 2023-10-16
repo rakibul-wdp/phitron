@@ -3,12 +3,12 @@
 int main()
 {
   // int arr[5] = {'a', 'b', 'u', 'l', 'b'};
-  char arr[5] = "Abulb";
+  char arr[6] = "Abulb";
 
-  for (int i = 0; i < 5; i++)
-  {
-    printf("%c ", arr[i]);
-  }
+  int siz = sizeof(arr) / sizeof(char);
+  printf("%d ", siz);
+
+  printf("%s", arr);
 
   return 0;
 }

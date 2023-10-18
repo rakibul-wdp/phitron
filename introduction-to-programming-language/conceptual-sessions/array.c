@@ -1,23 +1,14 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-  int n;
-  scanf("%d", &n);
-  int arr[n];
+  char ch[6];
+  // scanf("%s", &ch);
+  // gets(ch);
+  fgets(ch, 6, stdin);
 
-  for (int i = 0; i < n; i++)
-  {
-    scanf("%d", &arr[i]);
-  }
-
-  int sum = 1;
-  for (int i = 0; i < n; i++)
-  {
-    sum *= arr[i];
-  }
-
-  printf("%d\n", sum);
+  printf("%s %d %d\n", ch, strlen(ch), sizeof(ch));
 
   return 0;
 }

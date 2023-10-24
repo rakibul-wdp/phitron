@@ -10,13 +10,11 @@ int main()
   {
     if (i % 2 == 0)
     {
-      printf("%d", i);
-      printf(" =>even\n");
+      printf("%d - even\n", i);
     }
     else
     {
-      printf("%d", i);
-      printf(" =>odd\n");
+      printf("%d - odd\n", i);
     }
   }
 

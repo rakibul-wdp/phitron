@@ -9,15 +9,7 @@ int main()
   int consonant = 0;
   for (int i = 0; i < strlen(arr); i++)
   {
-    if (arr[i] != 'a')
-      consonant++;
-    else if (arr[i] != 'e')
-      consonant++;
-    else if (arr[i] != 'i')
-      consonant++;
-    else if (arr[i] != 'o')
-      consonant++;
-    else if (arr[i] != 'u')
+    if (arr[i] != 'a' && arr[i] != 'e' && arr[i] != 'i' && arr[i] != 'o' && arr[i] != 'u')
       consonant++;
   }
 

@@ -13,16 +13,21 @@ int main()
   while (i < j)
   {
     if (a[i] == a[j])
+    {
+      i++;
+      j--;
+    }
+    else
+    {
       flag = 0;
-    break;
-    i++;
-    j--;
+      break;
+    }
   }
 
   if (flag)
-    printf("NO\n");
-  else
     printf("YES\n");
+  else
+    printf("NO\n");
 
   return 0;
 }

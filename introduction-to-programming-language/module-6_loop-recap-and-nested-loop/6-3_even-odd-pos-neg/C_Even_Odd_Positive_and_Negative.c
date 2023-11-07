@@ -5,21 +5,21 @@ int main()
   int n;
   scanf("%d", &n);
 
+  int a;
   int even = 0, odd = 0, pos = 0, neg = 0;
   for (int i = 1; i <= n; i++)
   {
-    int nums;
-    scanf("%d", &nums);
+    scanf("%d", &a);
 
-    if (nums % 2 == 0)
+    if (a % 2 == 0)
       even++;
     else
       odd++;
 
-    if (nums > 0)
-      pos++;
-    else if (nums < 0)
+    if (a < 0)
       neg++;
+    else if (a > 0)
+      pos++;
   }
 
   printf("Even: %d\nOdd: %d\nPositive: %d\nNegative: %d\n", even, odd, pos, neg);

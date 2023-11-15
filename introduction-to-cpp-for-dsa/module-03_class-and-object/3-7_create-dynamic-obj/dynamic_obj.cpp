@@ -15,19 +15,11 @@ public:
   }
 };
 
-Student *fun()
-{
-  Student *abul = new Student(22, 4, 3.22);
-  return abul;
-}
-
 int main()
 {
-  Student *res = fun();
+  Student *babul = new Student(22, 3, 3.58);
 
-  cout << res->roll << " " << res->cls << " " << res->gpa << endl;
-
-  delete res;
+  cout << babul->roll << " " << babul->cls << " " << babul->gpa << endl;
 
   return 0;
 }

@@ -27,7 +27,20 @@ int main()
   food_2.pop_back();
   food_2.pop_back();
 
-  cout << food_1 << " " << food_2 << endl;
+  // cout << food_1 << " " << food_2 << endl;
+
+  string car = "BMW";
+  car = "tata";
+  car.assign("tesla");
+
+  // cout << car << endl;
+
+  string language = "JavaScriptTypeScript";
+  language.erase(4, 6);
+  language.replace(8, 6, "None");
+  language.insert(4, "Script");
+
+  cout << language << endl;
 
   return 0;
 }

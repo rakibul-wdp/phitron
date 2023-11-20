@@ -14,3 +14,14 @@ int main()
 
   return 0;
 }
+
+/*
+
+Which of the following options you will use to compare two strings for equality?
+
+- compares()
+- equals()
+- isEqualTo()
+- == operator
+
+*/

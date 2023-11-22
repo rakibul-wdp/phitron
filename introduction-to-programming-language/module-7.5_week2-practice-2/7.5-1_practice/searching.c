@@ -14,19 +14,17 @@ int main()
   int x;
   scanf("%d", &x);
 
-  int found = 0;
+  int ans = -1;
   for (int i = 0; i < n; i++)
   {
     if (arr[i] == x)
     {
-      printf("%d\n", i);
-      found = 1;
+      ans = i;
       break;
     }
   }
 
-  if (!found)
-    printf("-1");
+  printf("%d", ans);
 
   return 0;
 }

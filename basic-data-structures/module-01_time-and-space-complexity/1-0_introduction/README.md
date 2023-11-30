@@ -20,3 +20,7 @@
 - O(NlogN) -> 10^5 -> 1.6 \* 10^6
 - O(logN) -> 10^18
 - O(sqrt(N)) -> 10^12
+
+#### Ascending order
+
+- O(1) -> O(log N) -> O(sqrt(N)) -> O(N) -> O(N log N) -> O(N^2) -> O(2^N)

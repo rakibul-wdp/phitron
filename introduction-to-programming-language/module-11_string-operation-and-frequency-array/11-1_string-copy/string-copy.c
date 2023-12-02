@@ -1,18 +1,17 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-  char arr_a[10];
-  scanf("%s", &arr_a);
+  char a[100], b[100];
+  scanf("%s %s", a, b);
 
-  char arr_b[10];
-
-  for (int i = 0; i <= strlen(arr_a); i++)
+  for (int i = 0; i <= strlen(b); i++)
   {
-    arr_b[i] = arr_a[i];
+    a[i] = b[i];
   }
 
-  printf("%s", arr_b);
+  printf("%s %s", a, b);
 
   return 0;
 }

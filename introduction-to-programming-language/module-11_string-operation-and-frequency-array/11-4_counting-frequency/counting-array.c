@@ -10,20 +10,16 @@ int main()
     scanf("%d", &arr[i]);
   }
 
-  int zero = 0, one = 0, two = 0;
+  int count[7] = {0};
   for (int i = 0; i < n; i++)
   {
-    if (arr[i] == 0)
-      zero++;
-    if (arr[i] == 1)
-      one++;
-    if (arr[i] == 2)
-      two++;
+    count[arr[i]]++;
   }
 
-  printf("0 - %d\n", zero);
-  printf("1 - %d\n", one);
-  printf("2 - %d\n", two);
+  for (int i = 0; i <= 6; i++)
+  {
+    printf("%d - %d\n", i, count[i]);
+  }
 
   return 0;
 }

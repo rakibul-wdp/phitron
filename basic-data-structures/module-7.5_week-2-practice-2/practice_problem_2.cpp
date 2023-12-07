@@ -26,46 +26,29 @@ void insert_tail(Node *&head, Node *&tail, int val)
   tail = newNode;
 }
 
-int size(Node *head)
+void print_reverse(Node *n)
 {
-  Node *tmp = head;
-  int count = 0;
-  while (tmp != NULL)
-  {
-    count++;
-    tmp = tmp->next;
-  }
-  return count;
+  if (n == NULL)
+    return;
+  print_reverse(n->next);
+  cout << n->val << " ";
 }
 
 int main()
 {
-  Node *head1 = NULL;
-  Node *tail1 = NULL;
+  Node *head = NULL;
+  Node *tail = NULL;
 
-  Node *head2 = NULL;
-  Node *tail2 = NULL;
-
-  int val1, val2;
+  int val;
   while (true)
   {
-    cin >> val1;
-    if (val1 == -1)
+    cin >> val;
+    if (val == -1)
       break;
-    insert_tail(head1, tail1, val1);
-  }
-  while (true)
-  {
-    cin >> val2;
-    if (val2 == -1)
-      break;
-    insert_tail(head2, tail2, val2);
+    insert_tail(head, tail, val);
   }
 
-  if (size(head1) == size(head2))
-    cout << "YES" << endl;
-  else
-    cout << "NO" << endl;
+  print_reverse(head);
 
   return 0;
 }

@@ -31,26 +31,31 @@ void insert_at_tail(Node *&head, int v)
 
 void print_linked_list(Node *head)
 {
-  Node *tmp = head;
-
   int length = 0;
+  Node *tmp = head;
   while (tmp != NULL)
   {
     length++;
-    if (length % 2 == 0)
-    {
-      int res = length / 2;
-      cout <<
-    }
     tmp = tmp->next;
   }
+  int pos = length / 2;
+
+  tmp = head;
+
+  for (int i = 1; i <= pos - 1; i++)
+    tmp = tmp->next;
+
+  if (pos % 2 == 0)
+    cout << tmp->val << endl;
+  else
+    cout << tmp->val << " " << tmp->next->val << endl;
 }
 
 int main()
 {
-  int val;
-
   Node *head = NULL;
+
+  int val;
 
   while (true)
   {

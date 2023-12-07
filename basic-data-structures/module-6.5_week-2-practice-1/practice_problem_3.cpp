@@ -31,8 +31,8 @@ void insert_at_tail(Node *&head, int v)
 
 void print_linked_list(Node *head)
 {
-  int length = 0;
   Node *tmp = head;
+  int length = 0;
   while (tmp != NULL)
   {
     length++;
@@ -69,3 +69,12 @@ int main()
 
   return 0;
 }
+
+/*
+
+- get size of linked-list
+- pos= size /2
+- create loop pos -1 and then do tmp = tmp->next
+- now if pos % 2 == 0 then answer is tmp->val, otherwise answer is tmp->val and tmp->next->val
+
+*/

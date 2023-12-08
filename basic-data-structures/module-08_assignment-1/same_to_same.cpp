@@ -26,27 +26,17 @@ void insert_tail(Node *&head, Node *&tail, int val)
   tail = newNode;
 }
 
-int size(Node *head)
+bool areListsEqual(Node *head1, Node *head2)
 {
-  Node *tmp = head;
-  int count = 0;
-  while (tmp != NULL)
+  while (head1 != NULL && head2 != NULL)
   {
-    count++;
-    tmp = tmp->next;
+    if (head1->val != head2->val)
+      return false;
+    head1 = head1->next;
+    head2 = head2->next;
   }
-  return count;
-}
 
-int same_elements(Node *head)
-{
-  Node *tmp = head;
-
-  while (tmp != NULL)
-  {
-    return tmp->val;
-    tmp = tmp->next;
-  }
+  return (head1 == NULL && head2 == NULL);
 }
 
 int main()
@@ -57,29 +47,24 @@ int main()
   Node *head2 = NULL;
   Node *tail2 = NULL;
 
-  int val1, val2;
+  int val;
   while (true)
   {
-    cin >> val1;
-    if (val1 == -1)
+    cin >> val;
+    if (val == -1)
       break;
-    insert_tail(head1, tail1, val1);
+    insert_tail(head1, tail1, val);
   }
   while (true)
   {
-    cin >> val2;
-    if (val2 == -1)
+    cin >> val;
+    if (val == -1)
       break;
-    insert_tail(head2, tail2, val2);
+    insert_tail(head2, tail2, val);
   }
 
-  if (size(head1) == size(head2))
-  {
-    if (same_elements(head1) == same_elements(head2))
-      cout << "YES" << endl;
-    else
-      cout << "NO" << endl;
-  }
+  if (areListsEqual(head1, head2))
+    cout << "YES" << endl;
   else
     cout << "NO" << endl;
 

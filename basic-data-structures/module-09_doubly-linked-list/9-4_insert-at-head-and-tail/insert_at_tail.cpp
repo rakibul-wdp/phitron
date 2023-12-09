@@ -110,16 +110,16 @@ int main()
   c->prev = b;
 
   int pos, val;
-  cin >> val;
-  insert_tail(head, tail, val);
-  // if (pos == 0)
-  //   insert_head(head, tail, val);
-  // else if (pos == size(head))
-  //   insert_tail(tail, val);
-  // else if (pos >= size(head))
-  //   cout << "invalid" << endl;
-  // else
-  //   insert_at_position(head, pos, val);
+  cin >> pos >> val;
+
+  if (pos > size(head))
+    cout << "invalid" << endl;
+  else if (pos == 0)
+    insert_head(head, tail, val);
+  else if (pos == size(head))
+    insert_tail(head, tail, val);
+  else
+    insert_at_position(head, pos, val);
 
   print_normal(head);
   print_reverse(tail);

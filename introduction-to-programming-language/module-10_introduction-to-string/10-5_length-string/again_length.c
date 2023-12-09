@@ -4,10 +4,11 @@
 int main()
 {
   char a[100];
+  scanf("%s", a);
 
-  fgets(a, 50, stdin);
+  int st = strlen(a);
 
-  printf("%s", a);
+  printf("%d", st);
 
   return 0;
 }

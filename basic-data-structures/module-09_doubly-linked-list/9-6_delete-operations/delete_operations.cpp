@@ -95,10 +95,16 @@ int main()
   c->prev = b;
 
   int pos;
-  // cin >> pos;
-  // delete_at_position(head, pos);
-  // delete_tail(tail);
-  delete_head(head);
+  cin >> pos;
+
+  if (pos >= size(head))
+    cout << "invalid" << endl;
+  else if (pos == 0)
+    delete_head(head);
+  else if (pos == size(head) - 1)
+    delete_tail(tail);
+  else
+    delete_at_position(head, pos);
 
   print_normal(head);
   print_reverse(tail);

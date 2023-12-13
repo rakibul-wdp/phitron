@@ -27,6 +27,7 @@ int main()
   {
     for (int j = i + 1; j < n; j++)
     {
+      printf("i=>%d j=>%d\n", arr[i], arr[j]);
       if (arr[i] < arr[j])
       {
         int temp = arr[i];
@@ -36,8 +37,8 @@ int main()
     }
   }
 
-  for (int i = 0; i < n; i++)
-    printf("%d ", arr[i]);
+  // for (int i = 0; i < n; i++)
+  //   printf("%d ", arr[i]);
 
   return 0;
 }

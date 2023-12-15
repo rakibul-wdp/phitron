@@ -19,14 +19,11 @@ int main()
       myList.push_back(v);
     else if (x == 2)
     {
-      if (v == 0 && !myList.empty())
+      int sz = myList.size();
+      if (v == 0)
         myList.pop_front();
-      else if (v == myList.size() - 1 && !myList.empty())
-        myList.pop_back();
-      else if (v < myList.size())
-      {
+      else
         myList.erase(next(myList.begin(), v));
-      }
     }
 
     cout << "L -> ";

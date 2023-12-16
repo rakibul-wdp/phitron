@@ -34,5 +34,14 @@ int main()
 {
   myStack st;
 
-    return 0;
+  st.push(10);
+  st.push(20);
+  cout << st.top() << endl;
+  st.pop();
+  cout << st.top() << endl;
+  st.pop();
+  if (!st.empty())
+    cout << st.top() << endl;
+
+  return 0;
 }

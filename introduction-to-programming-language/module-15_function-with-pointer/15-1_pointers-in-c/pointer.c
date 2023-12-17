@@ -4,10 +4,11 @@ int main()
 {
   int x = 100;
   int *ptr = &x;
+  // x = 200;
+  *ptr = 200;
 
-  printf("x address: %p\n", &x);
-  printf("ptr value: %p\n", ptr);
-  printf("ptr value: %p\n", &ptr);
+  printf("x value: %d\n", x);
+  printf("ptr value: %d\n", *ptr);
 
   return 0;
 }

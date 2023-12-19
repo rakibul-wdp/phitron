@@ -33,3 +33,10 @@ int main()
 
   return 0;
 }
+
+/*
+Which type of function features in C can’t modify the value of the original variable from where it was called?
+
+- Call by value
+- Call by reference
+*/

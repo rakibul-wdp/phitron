@@ -12,10 +12,16 @@ int main()
   }
 
   // exact row
-  int e;
-  scanf("%d", &e);
+  int exact_row;
+  scanf("%d", &exact_row);
   for (int i = 0; i < col; i++)
-    printf("%d ", arr[e][i]);
+    printf("%d ", arr[exact_row][i]);
+
+  // exact column
+  int exact_column;
+  scanf("%d", &exact_column);
+  for (int i = 0; i < row; i++)
+    printf("%d ", arr[i][exact_column]);
 
   return 0;
 }

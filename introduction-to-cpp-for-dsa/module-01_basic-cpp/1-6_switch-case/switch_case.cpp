@@ -6,16 +6,13 @@ int main()
   int n;
   cin >> n;
 
-  switch (n)
+  switch (n % 2)
   {
+  case 0:
+    cout << "even" << endl;
+    break;
   case 1:
-    cout << "one" << endl;
-    break;
-  case 2:
-    cout << "two" << endl;
-    break;
-  case 3:
-    cout << "three" << endl;
+    cout << "odd" << endl;
     break;
 
   default:

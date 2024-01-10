@@ -3,20 +3,29 @@ using namespace std;
 
 int main()
 {
-  int n;
+  char n;
   cin >> n;
 
-  switch (n % 2)
+  switch (n)
   {
-  case 0:
-    cout << "even" << endl;
+  case 'a':
+    cout << "vowel" << endl;
     break;
-  case 1:
-    cout << "odd" << endl;
+  case 'e':
+    cout << "vowel" << endl;
+    break;
+  case 'i':
+    cout << "vowel" << endl;
+    break;
+  case 'o':
+    cout << "vowel" << endl;
+    break;
+  case 'u':
+    cout << "vowel" << endl;
     break;
 
   default:
-    cout << "nothing match" << endl;
+    cout << "consonant" << endl;
   }
 
   return 0;

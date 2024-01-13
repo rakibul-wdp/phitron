@@ -15,20 +15,20 @@ int main()
     stringstream ss(sentence);
 
     map<string, int> mp;
-    int max_count = 0;
-    string max_count_word;
 
+    string max_count_word;
+    int count = INT_MIN;
     while (ss >> word)
     {
       mp[word]++;
-      if (mp[word] > max_count)
+      if (mp[word] > count)
       {
-        max_count = mp[word];
+        count = mp[word];
         max_count_word = word;
       }
     }
 
-    cout << max_count_word << " " << max_count << endl;
+    cout << max_count_word << " " << count << endl;
   }
 
   return 0;

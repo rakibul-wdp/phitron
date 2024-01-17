@@ -22,8 +22,13 @@ int main()
   {
     for (int j = i + 1; j < n; j++)
     {
-      if (arr[i].roll < arr[j].roll)
+      if (arr[i].marks < arr[j].marks)
         swap(arr[i], arr[j]);
+      if (arr[i].marks == arr[j].marks)
+      {
+        if (arr[i].roll > arr[j].roll)
+          swap(arr[i], arr[j]);
+      }
     }
   }
 

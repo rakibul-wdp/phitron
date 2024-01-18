@@ -11,11 +11,22 @@ public:
 
 bool cmp(Student a, Student b)
 {
-  // if (a.marks >= b.marks)
+  if (a.marks == b.marks)
+    return a.roll < b.roll;
+  else
+    return a.marks > b.marks;
+  // if (a.marks > b.marks)
   //   return true;
-  // else
+  // else if (a.marks < b.marks)
   //   return false;
-  return a.marks >= b.marks;
+  // else
+  // {
+  //   // if (a.roll < b.roll)
+  //   //   return true;
+  //   // else
+  //   //   return false;
+  //   return a.roll < b.roll;
+  // }
 }
 
 int main()

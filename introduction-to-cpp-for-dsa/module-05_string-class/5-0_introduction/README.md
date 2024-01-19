@@ -16,3 +16,10 @@
 - s.clear() -> clear the string.
 - s.empty() -> return true/false if the string is empty
 - s.resize() -> change the size of the string.
+
+#### Element access
+
+- S[i] -> access the ith index of the string.
+- s.at(i) -> access the ith index of the string.
+- s.back() -> access the last element of the string.
+- s.front() -> access the first element of the string.

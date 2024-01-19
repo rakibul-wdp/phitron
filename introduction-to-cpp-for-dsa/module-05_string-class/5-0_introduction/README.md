@@ -35,3 +35,8 @@
 - s.erase() -> erase characters from the string.
 - s.replace() -> replace a portion of the string.
 - s.insert() -> insert a portion to a specific position.
+
+#### Iterators
+
+- s.begin() -> pointer to teh first element.
+- s.end() -> pointer to the next element after the last element of the string.

@@ -13,11 +13,18 @@ int main()
   // cout << a.capacity() << endl;
   // cout << a.size() << endl;
 
-  string s = "hello";
-  cout << s << endl;
+  // string s = "hello";
+  // cout << s << endl;
+  // s.clear();
+  // cout << s << endl;
+  // cout << s.size() << endl;
+
+  string s = "abul";
   s.clear();
-  cout << s << endl;
-  cout << s.size() << endl;
+  if (s.empty() == true)
+    cout << "empty" << endl;
+  else
+    cout << "not empty" << endl;
 
   return 0;
 }

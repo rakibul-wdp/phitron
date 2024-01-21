@@ -19,12 +19,25 @@ int main()
   // cout << s << endl;
   // cout << s.size() << endl;
 
-  string s = "abul";
-  s.clear();
-  if (s.empty() == true)
-    cout << "empty" << endl;
-  else
-    cout << "not empty" << endl;
+  // string s = "abul";
+  // s.clear();
+  // if (s.empty() == true)
+  //   cout << "empty" << endl;
+  // else
+  //   cout << "not empty" << endl;
+
+  string s;
+  cin >> s;
+
+  // s.resize(3);
+  // s.resize(12, 'y');
+  // cout << s.size() << endl;
+  // cout << s << endl;
+
+  s.resize(3);
+  cout << s << endl;
+  s.resize(12, 'y');
+  cout << s << endl;
 
   return 0;
 }

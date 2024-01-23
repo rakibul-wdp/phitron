@@ -23,7 +23,10 @@ int main()
   // cout << a << endl;
 
   string a = "Hello_World";
-  a.erase(5, 1);
+  // a.erase(5, 1);
+
+  a.replace(5, 1, "-");
+  a.insert(1, "G");
 
   cout << a << endl;
 

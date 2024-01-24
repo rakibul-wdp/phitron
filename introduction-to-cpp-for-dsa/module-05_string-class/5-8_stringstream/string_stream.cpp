@@ -5,12 +5,13 @@ int main()
 {
   string s;
   getline(cin, s);
-  stringstream chandu(s);
-  // chandu << s;
+  stringstream ss(s);
   string word;
 
-  while (chandu >> word)
+  while (ss >> word)
+  {
     cout << word << endl;
+  }
 
   return 0;
 }

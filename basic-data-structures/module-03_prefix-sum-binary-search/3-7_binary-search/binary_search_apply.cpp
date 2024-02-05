@@ -9,19 +9,29 @@ int main()
   for (int i = 0; i < n; i++)
     cin >> arr[i];
 
-    while (q--)
+  sort(arr, arr + n);
+
+  while (q--)
   {
     int x;
     cin >> x;
 
+    int l = 0;
+    int r = n - 1;
+
     bool flag = false;
-    for (int i = 0; i < n; i++)
+    while (l <= r)
     {
-      if (arr[i] == x)
+      int mid_index = (l + r) / 2;
+      if (arr[mid_index] == x)
       {
         flag = true;
         break;
       }
+      if (x > arr[mid_index])
+        l = mid_index + 1;
+      else
+        r = mid_index - 1;
     }
 
     if (flag)

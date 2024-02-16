@@ -1,3 +1,83 @@
+/*
+Problem Statement
+
+Rezia is trapped in a 2D maze of N * M size, starting at position R, and her goal is to reach the exit marked by D. The maze contains blocks represented by #, and she can only traverse through cells marked with dots (.). As she need to escape as early as possible, we need to determine the path she will follow.
+
+Place an X in each cell representing Rezia's route to exit the maze. If there is no viable path for her to exit, leave the maze unchanged.
+
+Note: Rezia can move in four directions – right, left, up, and down. It is crucial to adhere to the specified order: attempting right first, then left, followed by up, and finally down.
+
+Input Format
+First line will contain N and M.
+Next you will be given the 2D matrix.
+
+Constraints
+1. 1 <= N, M <= 10^3
+
+Output Format
+Output the final maze with marked X indicating the path she will follow.
+
+Sample Input 0
+5 6
+...D.#
+.##..#
+....#.
+.R#...
+.#.##.
+
+Sample Output 0
+...D.#
+.##X.#
+.XXX#.
+.R#...
+.#.##.
+
+Sample Input 1
+5 6
+...D.#
+.R...#
+....#.
+..#...
+.#.##.
+
+Sample Output 1
+...D.#
+.RXX.#
+....#.
+..#...
+.#.##.
+
+Sample Input 2
+5 6
+...D.#
+.....#
+.##.#.
+.R#...
+.#.##.
+
+Sample Output 2
+...D.#
+XXXX.#
+X##.#.
+XR#...
+.#.##.
+
+Sample Input 3
+5 6
+...D.#
+.....#
+###.#.
+.R#...
+.#.##.
+
+Sample Output 3
+...D.#
+.....#
+###.#.
+.R#...
+.#.##.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

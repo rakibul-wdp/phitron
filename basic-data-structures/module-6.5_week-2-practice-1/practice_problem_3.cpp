@@ -29,7 +29,7 @@ void insert_at_tail(Node *&head, int v)
   tmp->next = newNode;
 }
 
-void print_linked_list(Node *head)
+void middle_element(Node *head)
 {
   Node *tmp = head;
   int length = 0;
@@ -38,17 +38,17 @@ void print_linked_list(Node *head)
     length++;
     tmp = tmp->next;
   }
-  int pos = length / 2;
 
+  int pos = length / 2;
   tmp = head;
 
   for (int i = 1; i <= pos - 1; i++)
     tmp = tmp->next;
 
-  if (pos % 2 == 0)
-    cout << tmp->val << endl;
-  else
+  if (length % 2 == 0)
     cout << tmp->val << " " << tmp->next->val << endl;
+  else
+    cout << tmp->next->val << endl;
 }
 
 int main()
@@ -65,16 +65,7 @@ int main()
     insert_at_tail(head, val);
   }
 
-  print_linked_list(head);
+  middle_element(head);
 
   return 0;
 }
-
-/*
-
-- get size of linked-list
-- pos= size /2
-- create loop pos -1 and then do tmp = tmp->next
-- now if pos % 2 == 0 then answer is tmp->val, otherwise answer is tmp->val and tmp->next->val
-
-*/

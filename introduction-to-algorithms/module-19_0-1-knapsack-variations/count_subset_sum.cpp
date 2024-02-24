@@ -3,14 +3,14 @@ using namespace std;
 
 bool dp[1005][1005];
 
-bool subset_sum(int n, int arr[], int s)
+int subset_sum(int n, int arr[], int s)
 {
   if (n == 0)
   {
     if (s == 0)
-      return true;
+      return 1;
     else
-      return false;
+      return 0;
   }
 
   if (dp[n][s] != -1)
@@ -18,9 +18,9 @@ bool subset_sum(int n, int arr[], int s)
 
   if (arr[n - 1] <= s)
   {
-    bool op1 = subset_sum(n - 1, arr, s - arr[n - 1]);
-    bool op2 = subset_sum(n - 1, arr, s);
-    return dp[n][s] = op1 || op2;
+    int op1 = subset_sum(n - 1, arr, s - arr[n - 1]);
+    int op2 = subset_sum(n - 1, arr, s);
+    return dp[n][s] = op1 + op2;
   }
   else
     return dp[n][s] = subset_sum(n - 1, arr, s);
@@ -42,10 +42,7 @@ int main()
       dp[i][j] = -1;
   }
 
-  if (subset_sum(n, arr, s))
-    cout << "YES" << endl;
-  else
-    cout << "NO" << endl;
+  cout << subset_sum(n, arr, s) << endl;
 
   return 0;
 }

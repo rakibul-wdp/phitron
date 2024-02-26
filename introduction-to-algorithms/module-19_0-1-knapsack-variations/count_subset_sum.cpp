@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool dp[1005][1005];
+int dp[1005][1005];
 
 int subset_sum(int n, int arr[], int s)
 {

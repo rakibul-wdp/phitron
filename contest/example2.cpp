@@ -9,7 +9,7 @@ int main()
   int q;
   cin >> q;
 
-  priority_queue<int, vector<int>, greater<int>> pq;
+  priority_queue<int> pq;
   while (q--)
   {
     int x;
@@ -24,46 +24,18 @@ int main()
     else if (x == 2)
     {
       if (pq.empty())
-      {
         cout << "empty\n";
-      }
       else
       {
         cout << pq.top() << "\n";
-        int min_val = pq.top();
-        while (!pq.empty() && pq.top() == min_val)
+        int max_val = pq.top();
+        while (!pq.empty() && pq.top() == max_val)
         {
           pq.pop();
         }
       }
     }
   }
-
-  // vector<int> v;
-  // while (q--)
-  // {
-  //   int x, y;
-  //   cin >> x;
-
-  //   if (x == 1)
-  //   {
-  //     cin >> y;
-  //     auto it = find(v.begin(), v.end(), y);
-
-  //     if (it == v.end())
-  //       v.push_back(y);
-  //   }
-
-  //   else if (x == 2)
-  //   {
-  //     if (v.empty())
-  //       cout << "empty\n";
-
-  //     sort(v.begin(), v.end());
-  //     cout << v[0] << "\n";
-  //     v.erase(v.begin());
-  //   }
-  // }
 
   return 0;
 }

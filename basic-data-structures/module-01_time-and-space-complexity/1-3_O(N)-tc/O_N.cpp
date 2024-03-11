@@ -9,11 +9,11 @@ int main()
   for (int i = 0; i < n; i++) // O(N)
     cin >> arr[i];
 
-  int sum = 0;
-  for (int i = 0; i < n; i += 2) // O(N)
-    sum += arr[i];
+  int s = 0;
+  for (int i = 0; i < n; i++) // O(N)
+    s += arr[i];
 
-  cout << sum << endl;
+  cout << s << endl;
 
   return 0;
 }

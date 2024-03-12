@@ -12,9 +12,8 @@ int main()
   v.push_back(50);
 
   v.resize(2);
-  v.resize(7, 9);
+  v.resize(7, 8);
   cout << v.size() << endl;
-
   for (int i = 0; i < v.size(); i++)
     cout << v[i] << " ";
 

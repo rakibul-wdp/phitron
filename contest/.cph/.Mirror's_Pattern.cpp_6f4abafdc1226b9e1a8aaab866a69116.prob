@@ -1,0 +1,1 @@
+{"name":"Local: Mirror's_Pattern","url":"/home/rakibul/code/phitron/contest/Mirror's_Pattern.cpp","tests":[{"id":1703865680132,"input":"5","output":"12345\n2   4\n3   3\n4   2\n54321"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/rakibul/code/phitron/contest/Mirror's_Pattern.cpp","group":"local","local":true}

@@ -17,6 +17,9 @@ public:
 
 void level_order(Node *root)
 {
+  if (root == NULL)
+    return;
+
   queue<Node *> q;
   q.push(root);
 

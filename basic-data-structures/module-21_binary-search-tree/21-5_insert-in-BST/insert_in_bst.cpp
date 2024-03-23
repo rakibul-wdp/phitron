@@ -61,28 +61,63 @@ Node *input_tree()
   return root;
 }
 
-bool search(Node *root, int x)
+void level_order(Node *root)
 {
   if (root == NULL)
-    return false;
+    return;
 
-  if (root->val == x)
-    return true;
+  queue<Node *> q;
+  q.push(root);
+
+  while (!q.empty())
+  {
+    // 1. bring out
+    Node *f = q.front();
+    q.pop();
+
+    // all of works
+    cout << f->val << " ";
+
+    // 3. to keep her children
+    if (f->left)
+      q.push(f->left);
+    if (f->right)
+      q.push(f->right);
+  }
+}
+
+void insert(Node *&root, int x)
+{
+  if (root == NULL)
+  {
+    root = new Node(x);
+    return;
+  }
 
   if (x < root->val)
-    return search(root->left, x);
+  {
+    if (root->left == NULL)
+      root->left = new Node(x);
+    else
+      insert(root->left, x);
+  }
   else
-    return search(root->right, x);
+  {
+    if (root->right == NULL)
+      root->right = new Node(x);
+    else
+      insert(root->right, x);
+  }
 }
 
 int main()
 {
   Node *root = input_tree();
 
-  if (search(root, 77))
-    cout << "Yes" << endl;
-  else
-    cout << "No" << endl;
+  insert(root, 13);
+  insert(root, 32);
+
+  level_order(root);
 
   return 0;
 }

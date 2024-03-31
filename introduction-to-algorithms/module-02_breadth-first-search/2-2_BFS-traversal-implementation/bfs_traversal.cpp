@@ -2,6 +2,7 @@
 using namespace std;
 
 vector<int> v[1005];
+
 bool vis[1005];
 void bfs(int src)
 {
@@ -50,12 +51,14 @@ int main()
 }
 
 /*
-5 6
+7 8
 0 1
 1 2
 0 4
 1 3
 2 0
 3 4
+1 5
+3 6
 0
 */

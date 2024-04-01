@@ -10,18 +10,15 @@ int main()
   {
     string s;
     cin >> s;
-  }
 
-  cout << "NO\n"
-       << "YES\n"
-       << "NO\n"
-       << "YES\n"
-       << "NO\n"
-       << "NO\n"
-       << "NO\n"
-       << "NO\n"
-       << "NO\n"
-       << "YES\n";
+    bool flag = false;
+
+    for (int i = 0; i <= s.size(); i++)
+      if (s[i] == 'i' && s[i + 1] == 't')
+        flag = true;
+
+    cout << (flag ? "YES" : "NO") << "\n";
+  }
 
   return 0;
 }

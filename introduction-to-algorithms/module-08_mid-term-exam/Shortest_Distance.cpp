@@ -31,8 +31,7 @@ int main()
     {
       for (int j = 0; j <= n; j++)
       {
-        if (adj[i][k] != 1e18 && adj[k][j] != 1e18 &&
-            adj[i][k] + adj[k][j] < adj[i][j])
+        if (adj[i][k] + adj[k][j] < adj[i][j])
           adj[i][j] = adj[i][k] + adj[k][j];
       }
     }

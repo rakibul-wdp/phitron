@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int fact(int n)
+int fact(int n) // O(N)
 {
   // base case
   if (n == 0)
@@ -17,6 +17,12 @@ int main()
   cin >> n;
 
   cout << fact(n) << endl;
+
+  int ans = 1;
+  for (int i = 1; i <= n; i++) // O(N)
+    ans *= i;
+
+  cout << ans << endl;
 
   return 0;
 }

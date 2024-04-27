@@ -10,19 +10,16 @@ int main()
   for (int i = 0; i < n; i++)
     cin >> v[i];
 
-  sort(v.begin(), v.end());
-
   while (q--)
   {
     int x;
     cin >> x;
 
-    if (v.begin() > v.end())
+    auto it = find(v.begin(), v.end(), x);
+
+    if (it == v.end())
       cout << "not found\n";
-
-    int middle = (v.begin() + v.end()) / 2;
-
-    if (v[middle] == x)
+    else
       cout << "found\n";
   }
 

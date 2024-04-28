@@ -15,9 +15,9 @@ int main()
     int l, r;
     cin >> l >> r;
 
-    int sum = 0;
+    long long sum = 0;
 
-    for (int i = v[l - 1]; i <= v[r - 1]; i++)
+    for (int i = l - 1; i <= r - 1; i++)
       sum += v[i];
 
     cout << sum << "\n";

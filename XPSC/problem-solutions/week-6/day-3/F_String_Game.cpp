@@ -3,8 +3,7 @@ using namespace std;
 
 int main()
 {
-  string s;
-  cin >> s;
+  int t;
 
   return 0;
 }

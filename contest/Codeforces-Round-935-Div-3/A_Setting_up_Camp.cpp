@@ -14,7 +14,7 @@ int main()
     long long f = b % 3;
 
     if (f + c >= 3 || f == 0)
-      cout << a + (b + c) / 3 << endl;
+      cout << fixed << setprecision(0) << a + ceil((b + c) / 3.0) << endl;
     else
       cout << -1 << endl;
   }

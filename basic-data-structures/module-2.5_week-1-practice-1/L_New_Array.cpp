@@ -5,19 +5,20 @@ int main()
 {
   int n;
   cin >> n;
-  vector<int> A(n);
-  vector<int> B(n);
+
+  vector<int> a(n), b(n), c;
   for (int i = 0; i < n; i++)
-    cin >> A[i];
+    cin >> a[i];
   for (int i = 0; i < n; i++)
-    cin >> B[i];
+    cin >> b[i];
 
-  vector<int> C(B);
+  for (int x : b)
+    c.push_back(x);
+  for (int x : a)
+    c.push_back(x);
 
-  C.insert(C.end(), A.begin(), A.end());
-
-  for (int val : C)
-    cout << val << " ";
+  for (int x : c)
+    cout << x << " ";
 
   return 0;
 }

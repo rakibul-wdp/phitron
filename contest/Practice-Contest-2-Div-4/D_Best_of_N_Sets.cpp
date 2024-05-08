@@ -12,9 +12,9 @@ int main()
     cin >> x >> y;
 
     if (x > y)
-      cout << (x - 1) + x << endl;
+      cout << (x - 1) + x << "\n";
     else
-      cout << (y - 1) + y << endl;
+      cout << (y - 1) + y << "\n";
   }
 
   return 0;

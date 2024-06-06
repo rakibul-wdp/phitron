@@ -1,76 +1,57 @@
+#include <iostream>
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
 
-int main()
+void sol()
 {
-  int testCases;
-  cin >> testCases;
 
-  while (testCases--)
+  int n;
+  cin >> n;
+  vector<int> v(n);
+
+  for (auto &val : v)
+    cin >> val;
+
+  int x = 1;
+
+  for (auto &val : v)
   {
-    int n, k;
-    cin >> n >> k;
+    int y = __gcd(x, val);
+    y = val / y;
+    x *= y;
+  }
+  int sum = 0;
+  vector<int> ans;
+  for (auto &val : v)
+  {
+    sum += x / val;
+    ans.push_back(x / val);
+  }
 
-    vector<int> arr(n);
-    for (int i = 0; i < n; i++)
-      cin >> arr[i];
-
-    int initialSum = 0;
-
-    for (int i = 0; i < n - 1; i++)
-      initialSum += abs(arr[i] - arr[i + 1]);
-
-    int maxSum = initialSum;
-
-    for (int i = 0; i < n; i++)
+  if (sum >= x)
+  {
+    cout << -1 << endl;
+  }
+  else
+  {
+    for (auto &val : ans)
     {
-      if (i > 0)
-      {
-        int currentSum = initialSum - abs(arr[i] - arr[i - 1]) + abs(1 - arr[i - 1]);
-
-        if (i < n - 1)
-        {
-          currentSum -= abs(arr[i] - arr[i + 1]);
-          currentSum += abs(1 - arr[i + 1]);
-        }
-
-        maxSum = max(maxSum, currentSum);
-
-        currentSum = initialSum - abs(arr[i] - arr[i - 1]) + abs(k - arr[i - 1]);
-
-        if (i < n - 1)
-        {
-          currentSum -= abs(arr[i] - arr[i + 1]);
-          currentSum += abs(k - arr[i + 1]);
-        }
-
-        maxSum = max(maxSum, currentSum);
-      }
-      else
-      {
-        int currentSum = initialSum;
-
-        if (i < n - 1)
-        {
-          currentSum -= abs(arr[i] - arr[i + 1]);
-          currentSum += abs(1 - arr[i + 1]);
-        }
-
-        maxSum = max(maxSum, currentSum);
-
-        currentSum = initialSum;
-
-        if (i < n - 1)
-        {
-          currentSum -= abs(arr[i] - arr[i + 1]);
-          currentSum += abs(k - arr[i + 1]);
-        }
-
-        maxSum = max(maxSum, currentSum);
-      }
+      cout << val << " ";
     }
+    cout << endl;
+  }
 
-    cout << maxSum << endl;
+  return;
+}
+
+signed main()
+{
+  int test;
+  cin >> test;
+  while (test--)
+  {
+    sol();
   }
 
   return 0;

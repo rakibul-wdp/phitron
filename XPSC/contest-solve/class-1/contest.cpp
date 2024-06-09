@@ -1,57 +1,47 @@
-#include <iostream>
 #include <bits/stdc++.h>
-#define int long long
 using namespace std;
 
-void sol()
+int main()
 {
+  int testCases;
+  cin >> testCases;
 
-  int n;
-  cin >> n;
-  vector<int> v(n);
-
-  for (auto &val : v)
-    cin >> val;
-
-  int x = 1;
-
-  for (auto &val : v)
+  while (testCases--)
   {
-    int y = __gcd(x, val);
-    y = val / y;
-    x *= y;
-  }
-  int sum = 0;
-  vector<int> ans;
-  for (auto &val : v)
-  {
-    sum += x / val;
-    ans.push_back(x / val);
-  }
+    string input;
+    cin >> input;
 
-  if (sum >= x)
-  {
-    cout << -1 << endl;
-  }
-  else
-  {
-    for (auto &val : ans)
+    bool isValid = true;
+
+    if (input[0] != '1')
+      isValid = false;
+    else
     {
-      cout << val << " ";
+      for (int index = 1; index < input.size(); ++index)
+      {
+        if (index != input.size() - 1)
+        {
+          if (input[index] == '0')
+          {
+            isValid = false;
+            break;
+          }
+        }
+        else
+        {
+          if (input[index] > '8')
+          {
+            isValid = false;
+            break;
+          }
+        }
+      }
     }
-    cout << endl;
-  }
 
-  return;
-}
-
-signed main()
-{
-  int test;
-  cin >> test;
-  while (test--)
-  {
-    sol();
+    if (isValid)
+      cout << "YES\n";
+    else
+      cout << "NO\n";
   }
 
   return 0;

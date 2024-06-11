@@ -8,40 +8,10 @@ int main()
 
   while (testCases--)
   {
-    string input;
-    cin >> input;
+    string a, b;
+    cin >> a >> b;
 
-    bool isValid = true;
-
-    if (input[0] != '1')
-      isValid = false;
-    else
-    {
-      for (int index = 1; index < input.size(); ++index)
-      {
-        if (index != input.size() - 1)
-        {
-          if (input[index] == '0')
-          {
-            isValid = false;
-            break;
-          }
-        }
-        else
-        {
-          if (input[index] > '8')
-          {
-            isValid = false;
-            break;
-          }
-        }
-      }
-    }
-
-    if (isValid)
-      cout << "YES\n";
-    else
-      cout << "NO\n";
+    cout << b[0] << a[1] << a[2] << " " << a[0] << b[1] << b[2] << "\n";
   }
 
   return 0;

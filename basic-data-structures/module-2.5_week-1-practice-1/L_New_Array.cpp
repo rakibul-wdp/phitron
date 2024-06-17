@@ -6,19 +6,25 @@ int main()
   int n;
   cin >> n;
 
-  vector<int> a(n), b(n), c;
+  vector<int> c(n * 2);
   for (int i = 0; i < n; i++)
-    cin >> a[i];
+  {
+    int x;
+    cin >> x;
+
+    c[n + i] = x;
+  }
+
   for (int i = 0; i < n; i++)
-    cin >> b[i];
+  {
+    int x;
+    cin >> x;
 
-  for (int x : b)
-    c.push_back(x);
-  for (int x : a)
-    c.push_back(x);
+    c[i] = x;
+  }
 
-  for (int x : c)
-    cout << x << " ";
+  for (int i = 0; i < n * 2; i++)
+    cout << c[i] << " ";
 
   return 0;
 }

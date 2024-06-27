@@ -3,15 +3,22 @@ using namespace std;
 
 int main()
 {
-  int testCases;
-  cin >> testCases;
+  int n;
+  cin >> n;
+  vector<pair<int, int>> coins(n);
 
-  while (testCases--)
+  for (int i = 0; i < n; ++i)
+    cin >> coins[i].first >> coins[i].second;
+
+  for (const auto &coin : coins)
   {
-    string a, b;
-    cin >> a >> b;
+    int x = coin.first;
+    int y = coin.second;
 
-    cout << b[0] << a[1] << a[2] << " " << a[0] << b[1] << b[2] << "\n";
+    if (abs(x) <= abs(y) && ((x - y) % 2 == 0))
+      cout << "YES" << endl;
+    else
+      cout << "NO" << endl;
   }
 
   return 0;

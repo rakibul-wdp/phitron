@@ -6,20 +6,23 @@ int main()
   int n;
   cin >> n;
 
-  vector<int> v(n);
+  vector<int> initialVector(n);
   for (int i = 0; i < n; i++)
-    cin >> v[i];
+    cin >> initialVector[i];
 
+  vector<int> replacedVector;
   for (int i = 0; i < n; i++)
   {
-    if (v[i] > 0)
-      replace(v.begin(), v.end(), v[i], 1);
-    else if (v[i] < 0)
-      replace(v.begin(), v.end(), v[i], 2);
+    if (initialVector[i] > 0)
+      replacedVector.push_back(1);
+    else if (initialVector[i] < 0)
+      replacedVector.push_back(2);
+    else
+      replacedVector.push_back(0);
   }
 
-  for (int x : v)
-    cout << x << " ";
+  for (int i = 0; i < n; i++)
+    cout << replacedVector[i] << " ";
 
   return 0;
 }

@@ -6,11 +6,10 @@ int main()
   int n;
   cin >> n;
 
-  vector<int> initialVector(n);
+  vector<int> initialVector(n), replacedVector;
   for (int i = 0; i < n; i++)
     cin >> initialVector[i];
 
-  vector<int> replacedVector;
   for (int i = 0; i < n; i++)
   {
     if (initialVector[i] > 0)
